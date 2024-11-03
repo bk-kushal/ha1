@@ -88,7 +88,26 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
-
     //TODO hier weitere Tests erstellen
+
+    //Teilaufgabe 1 : Grüner Test
+    @Test
+    @DisplayName("should clear the display when C or CE is pressed")
+    void testClearDisplay() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(9);
+        calc.pressDigitKey(8);
+        calc.pressClearKey();
+
+        String expected = "0";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+
+
+    }
+
+
 }
 
